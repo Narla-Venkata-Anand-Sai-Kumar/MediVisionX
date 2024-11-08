@@ -1,6 +1,6 @@
-# Health-Vision
+# MediVisionX
 
-**Health-Vision** is a medical image classification web application that uses deep learning models to classify medical images and provide diagnostic insights. The application is built using Flask for the backend, TensorFlow for model handling, and OpenCV for image processing.
+**MediVisionX** is a medical image classification web application that uses deep learning models to classify medical images and provide diagnostic insights. The application is built using Flask for the backend, TensorFlow for model handling, and OpenCV for image processing.
 
 ## Table of Contents
 - [Features](#features)
@@ -69,8 +69,8 @@ To set up the project locally, follow these steps:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/Narla-Venkata-Anand-Sai-Kumar/Health-Vision.git
-cd Health-Vision
+git clone https://github.com/Narla-Venkata-Anand-Sai-Kumar/MediVisionX.git
+cd MediVisionX
 ```
 
 ### Set Up Virtual Environment (Optional)
