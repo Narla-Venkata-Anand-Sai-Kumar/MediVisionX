@@ -147,6 +147,11 @@ If you'd like to contribute to Health-Vision:
 
 All contributions, issues, and feature requests are welcome!
 
+## Team
+
+- [NARLA VENKATA ANAND SAI KUMAR](https://github.com/Narla-Venkata-Anand-Sai-Kumar/)
+- [KARTHIK TARAKA SAI BOLLA](https://github.com/karthikbolla)
+
 ## License
 
 This project is licensed under the MIT License.
