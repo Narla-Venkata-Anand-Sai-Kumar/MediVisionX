@@ -73,34 +73,46 @@ git clone https://github.com/Narla-Venkata-Anand-Sai-Kumar/MediVisionX.git
 cd MediVisionX
 ```
 
-### Set Up Virtual Environment (Optional)
-
+### 🚀 **1. Build the Docker Image**  
 ```bash
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+docker build -t medvisionx .
 ```
+- `-t medvisionx` tags the image with the name `medvisionx`.
+- `.` specifies the current directory as the build context.
 
-### Install Dependencies
+---
 
+### ⚡ **2. Run the Docker Container**  
 ```bash
-pip install -r requirements.txt
+docker run -d -p 5100:5100 --name medvisionx-container medvisionx
 ```
+- `-d` runs the container in detached mode (in the background).
+- `-p 5100:5100` maps port `5100` on your machine to port `5100` in the container.
+- `--name medvisionx-container` gives the container a recognizable name.
+- `medvisionx` is the image name you built earlier.
 
-Ensure the following libraries are installed:
-- **Flask**: For the web application framework.
-- **TensorFlow**: For loading and using the machine learning models.
-- **OpenCV**: For image processing.
-- **NumPy**: For numerical computations.
-- **Pillow**: For image handling in Python.
+---
 
-## Usage
-
-To run the application locally, follow these steps:
-
-### Start the Flask Application
-
+### ✅ **3. Verify the Running Container**  
 ```bash
-python app.py
+docker ps
+```
+This shows active containers. You should see `medvisionx-container` running.
+
+---
+
+### 📊 **4. Check Container Logs (Optional)**  
+```bash
+docker logs medvisionx-container
+```
+This helps if you want to debug any output or errors.
+
+---
+
+### 🛑 **5. Stop and Remove the Container (If Needed)**  
+```bash
+docker stop medvisionx-container
+docker rm medvisionx-container
 ```
 
 ### Access the Application
