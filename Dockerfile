@@ -18,4 +18,4 @@ RUN pip3 install --no-cache-dir --default-timeout=1000 -r requirements.txt
 EXPOSE 5100
 
 # Run the application
-ENTRYPOINT ["python", "app.py"]
+ENTRYPOINT ["gunicorn", "-w", "4", "-b", "0.0.0.0:5100", "app:app"]
