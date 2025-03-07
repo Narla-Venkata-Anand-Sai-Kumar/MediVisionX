@@ -1,5 +1,4 @@
-FROM python:3.10
-
+FROM python:3.9
 # Set the working directory
 WORKDIR /app
 
@@ -7,13 +6,17 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     libgl1-mesa-glx \
     libglib2.0-0 \
+    python3-dev \
+    build-essential \
     && rm -rf /var/lib/apt/lists/*  
 
 # Copy application files
 COPY . /app
 
 # Install Python dependencies
-RUN pip3 install --no-cache-dir --default-timeout=1000 -r requirements.txt
+RUN pip install --upgrade pip setuptools wheel
+RUN pip install --no-cache-dir --default-timeout=1000 -r requirements.txt
+
 
 EXPOSE 5100
 
